@@ -5,7 +5,7 @@ author: Lijia Yu
 email: yu@lijiayu.net
 description: "Linnet8989's Tech Blog." # You can edit this line in _config.yml. It will appear in your document head meta and in your feed.xml site description
 keywords: "programming, python, python3, leetcode, algorithm"
-baseurl: "/" # the subpath of your site, e.g. /blog/
+# baseurl: "/" # the subpath of your site, e.g. /blog/
 url: "http://linnet8989.github.io" # the base hostname & protocol for your site
 locale: zh_CN
 
