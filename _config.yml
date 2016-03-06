@@ -1,8 +1,8 @@
 ### Site info:
 title: Linnet8989's Blog
 tagline: Journal of linnet8989
-author: Lijia Yu
-email: yu@lijiayu.net
+author: Linnet8989
+email: linnet8989@gmail.com
 description: "Linnet8989's Tech Blog." # You can edit this line in _config.yml. It will appear in your document head meta and in your feed.xml site description
 keywords: "programming, python, python3, leetcode, algorithm"
 # baseurl: "/" # the subpath of your site, e.g. /blog/
@@ -15,7 +15,7 @@ github_username:  linnet8989
 disqus_shortname: linnet8989
 favicon:     "/images/favicon.ico"
 aboutme: A practitioner of programming. # these are shown on aboutme-sidebar.
-aboutme_photo: http://static.boredpanda.com/blog/wp-content/uploads/2014/11/16th-century-super-heroes-7.jpg # your photo.
+aboutme_photo: http://sachagoldberger.com/portfolio/wp-content/gallery/super-flemish/15_07_13_Super-H%C3%A9ros-Flamands-_08_BatmanRobin_0440_04_3.jpg # your photo.
 google_analytics_key:  # put YOUR key here to enable tracking! (blank to disable)
 
 
