@@ -14,12 +14,12 @@
         </svg>
       </a>
       <div class="trigger">
-        {% var a %}
         {% for page in site.pages %}
-        {% if page.title and (page.title!==a.title) %}
+        {% ifchanged page.title %}
+        {% if page.title %}
         <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
         {% endif %}
-        {% a=page %}
+        {% endifchanged %}
         {% endfor %}
       </div>
     </nav>
