@@ -55,10 +55,7 @@ locales:
       Google_search: "站内搜索"
 ### your Blogroll info, only name can shown on the page.
 
-Blogroll:
-      - name: Lijia Yu's website
-        href: http://yulijia.net/
-        title: Theme freshman21's author
+Blogroll: 
 
 
 ### Build settings
