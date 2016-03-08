@@ -2,7 +2,7 @@
 published: true
 title: Hello world!
 layout: post
-author: linnet
+author: linnet8989
 category: Uncategorized
 tags: HelloWorld
 

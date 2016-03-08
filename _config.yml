@@ -12,7 +12,7 @@ locale: zh_CN
 ### Personal info and site tools info:
 twitter_username: linnet8989
 github_username:  linnet8989
-disqus_shortname: freshman21
+disqus_shortname: linnet8989
 favicon:     "/images/favicon.ico"
 aboutme: A practitioner of programming. # these are shown on aboutme-sidebar.
 aboutme_photo: https://i.imgur.com/mqMqyjN.jpg # your photo.
@@ -55,7 +55,7 @@ locales:
       Google_search: "站内搜索"
 ### your Blogroll info, only name can shown on the page.
 
-Blogroll: 
+Blogroll:
 
 
 ### Build settings
