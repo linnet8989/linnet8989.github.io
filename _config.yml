@@ -16,7 +16,7 @@ disqus_shortname: linnet8989
 favicon:     "/images/favicon.ico"
 aboutme: A practitioner of programming. # these are shown on aboutme-sidebar.
 aboutme_photo: https://i.imgur.com/mqMqyjN.jpg # your photo.
-google_analytics_key:  # put YOUR key here to enable tracking! (blank to disable)
+google_analytics_key: GTM-MK565X # put YOUR key here to enable tracking! (blank to disable)
 
 
 ### Site setting:
