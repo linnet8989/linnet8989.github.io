@@ -17,12 +17,12 @@ tags:
 
 ~~~
 for j ← 2 to length[A]
-	key ← A[j]
-		i ← j-1
-		while i>0 and A[i]>key
-			A[i+1] ← A[i]
-			i ← i-1
-		A[i+1] ← key
+  key ← A[j]
+    i ← j-1
+    while i>0 and A[i]>key
+      A[i+1] ← A[i]
+      i ← i-1
+    A[i+1] ← key
 ~~~
 
 插入排序使用的是增量(incremental)方法：在排好子数组A[1..j-1]后，将元素A[j]插入，形成排好序的子数组A[1..j]。
@@ -44,34 +44,34 @@ for j ← 2 to length[A]
 
 ~~~
 MERGE(A, p, q, r)
-	n1 ← q-p+1
-	n2 ← r-q
-	create arrays L[1..n1+1] and R[1..n2+1]
-	for i ← 1 to n1
-		L[i] ← A[p+i-1]
-	for j ← 1 to n2
-		R[j] ← A[q+j]
-	L[n1+1] ← ∞
-	R[n2+1] ← ∞
-	i ← 1
-	j ← 1
-	for k ← p to r
-		if L[i] ≤ R[j]
-			then A[k] ← L[i]
-			     i ← i+1
-			else A[k] ← R[j]
-			     j ← j+1
+  n1 ← q-p+1
+  n2 ← r-q
+  create arrays L[1..n1+1] and R[1..n2+1]
+  for i ← 1 to n1
+    L[i] ← A[p+i-1]
+  for j ← 1 to n2
+    R[j] ← A[q+j]
+  L[n1+1] ← ∞
+  R[n2+1] ← ∞
+  i ← 1
+  j ← 1
+  for k ← p to r
+    if L[i] ≤ R[j]
+      then A[k] ← L[i]
+           i ← i+1
+      else A[k] ← R[j]
+           j ← j+1
 ~~~
 
 #### 排序的算法（O(nlgn)）
 
 ~~~
 MERCGE-SORT(A, p, r)
-	if p < r
-		then q ← [(p+r)/2]
-		     MERGE-SORT(A, p, q)
-		     MERGE-SORT(A, q+1, r)
-		     MERGE(A, p, q, r)
+  if p < r
+    then q ← [(p+r)/2]
+         MERGE-SORT(A, p, q)
+         MERGE-SORT(A, q+1, r)
+         MERGE(A, p, q, r)
 ~~~
 
 合并排序算法完全依照了分治模式，其操作如下：
@@ -88,10 +88,10 @@ MERCGE-SORT(A, p, r)
 
 ~~~
 BUBBLE-SORT(A)
-	for i ← 1 to length[A]
-		for j ← length[A] downto i+1
-			if A[j] < A[j-1]
-				then exchange A[j] ↔ A[j-1]
+  for i ← 1 to length[A]
+    for j ← length[A] downto i+1
+      if A[j] < A[j-1]
+        then exchange A[j] ↔ A[j-1]
 ~~~
 
 ## 第3章 函数的增长
@@ -107,13 +107,13 @@ BUBBLE-SORT(A)
 
 ~~~
 RANDOMIZZED-HIRE-ASSISTANT(n)
-	randomly permute the list of condidate
-	best ← 0  ⊳cndidate 0 is a least-qualified dummy candidate
-	for i ← 1 to n
-		interview condidate i
-		if condidate i is better than candidate best
-			then best ← i
-			     hire candidate i
+  randomly permute the list of condidate
+  best ← 0  ⊳cndidate 0 is a least-qualified dummy candidate
+  for i ← 1 to n
+    interview condidate i
+    if condidate i is better than candidate best
+      then best ← i
+           hire candidate i
 ~~~
 
 ### 随机排列算法（RANDOM()为选取随机数的函数）
@@ -122,11 +122,11 @@ RANDOMIZZED-HIRE-ASSISTANT(n)
 
 ~~~
 PERMUTE-BY-SORTING(A)
-	n ← length[A]
-	for i ← 1 to n
-		P[i] = RANDOM(1, n^3)
-	sort A, using P as sort keys
-	return A
+  n ← length[A]
+  for i ← 1 to n
+    P[i] = RANDOM(1, n^3)
+  sort A, using P as sort keys
+  return A
 ~~~
 
 为数组的每一个元素A[i]赋一个随机的优先级P[i]，然后根据优先级对数组A中的元素进行排序
@@ -135,9 +135,9 @@ PERMUTE-BY-SORTING(A)
 
 ~~~
 RANDOMIZE-IN-PLACE(A)
-	n ← length[A]
-	for i ← 1 to n
-		swap A[i] ↔ A[RANDOM(i,n)]
+  n ← length[A]
+  for i ← 1 to n
+    swap A[i] ↔ A[RANDOM(i,n)]
 ~~~
 
 在第i次迭代时，从元素A[i]到A[n]中随机选取一个替换元素A[i]。第i次迭代后，A[i]保持不变
@@ -150,11 +150,11 @@ RANDOMIZE-IN-PLACE(A)
 
 ~~~
 PARENT(i)
-	return ⌊i/2⌋
+  return ⌊i/2⌋
 LEFT(i)
-	return 2i
+  return 2i
 RIGHT(i)
-	return 2i+1
+  return 2i+1
 ~~~
 
 在大多数计算机上，上面过程可以在一条指令内计算出来，将i的二进制表示右移和左移一位能分别实现PARENT()和LEFT()
@@ -163,16 +163,16 @@ RIGHT(i)
 
 ~~~
 MAX-HEAPIFY(A, i)
-	l ← LEFT(i)
-	r ← RIGHT(i)
-	if l≤heap-size[A] and A[l]>A[i]
-		then largest ← l
-		else largest ← i
-	if r≤heap-size[A] and A[l]>A[i]
-		then largest ← r
-	if largest≠i
-		then exchange A[i]↔A[largest]
-		     MAX-HEAPIFY(A, largest)
+  l ← LEFT(i)
+  r ← RIGHT(i)
+  if l≤heap-size[A] and A[l]>A[i]
+    then largest ← l
+    else largest ← i
+  if r≤heap-size[A] and A[l]>A[i]
+    then largest ← r
+  if largest≠i
+    then exchange A[i]↔A[largest]
+         MAX-HEAPIFY(A, largest)
 ~~~
 
 MAX-HEAPIFY让A[i]在最大堆中“下降”，使以i为根的子树成为最大堆（假设以LEFT(i)和RIGHT(i)为根的两棵二叉树都是最大堆）。heap-size返回二叉树A的大小。
@@ -181,9 +181,9 @@ MAX-HEAPIFY让A[i]在最大堆中“下降”，使以i为根的子树成为最�
 
 ~~~
 BUILD-MAX-HEAP(A)
-	heap-size[A] ← length[A]
-	for i ← ⌊length[A]/2⌋ downto 1
-		MAX-HEAPIFY(A, i)
+  heap-size[A] ← length[A]
+  for i ← ⌊length[A]/2⌋ downto 1
+    MAX-HEAPIFY(A, i)
 ~~~
 
 BUILD-MAX-HEAP通过自底向上地用MAX-HEAPIFY，将数组A[1..n]（此处n=length[A]）变成最大堆
@@ -192,11 +192,11 @@ BUILD-MAX-HEAP通过自底向上地用MAX-HEAPIFY，将数组A[1..n]（此处n=l
 
 ~~~
 HEAPSORT(A)
-	BUILD-MAX-HEAP(A)
-	for i ← length[A] downto 2
-		exchange A[1]↔A[i]
-		heap-size[A] ← heap-size[A]-1
-		MAX-HEAPIFY(A, 1)
+  BUILD-MAX-HEAP(A)
+  for i ← length[A] downto 2
+    exchange A[1]↔A[i]
+    heap-size[A] ← heap-size[A]-1
+    MAX-HEAPIFY(A, 1)
 ~~~
 
 ### 优先级队列
@@ -217,10 +217,10 @@ HEAPSORT(A)
 
 ~~~
 QUICKSORT(A, p, r)
-	if p<r
-		then q ← PARTITION(A, p, r)
-		     QUICKSORT(A, p, q-1)
-		     QUICKSORT(A, q+1, r)
+  if p<r
+    then q ← PARTITION(A, p, r)
+         QUICKSORT(A, p, q-1)
+         QUICKSORT(A, q+1, r)
 ~~~
 
 调用QUICKSORT(A, 1, length[A])即可对数组A完成排序
@@ -229,14 +229,14 @@ QUICKSORT(A, p, r)
 
 ~~~
 PARTITION(A, p, r)
-	x ← A[r]
-	i ← p-1
-	for j ← p to r-1
-		if A[j]≤x
-			then i ← i+1
-			     exchange A[i]↔A[j]
-	exchange A[i+1]↔A[r]
-	return i+1
+  x ← A[r]
+  i ← p-1
+  for j ← p to r-1
+    if A[j]≤x
+      then i ← i+1
+           exchange A[i]↔A[j]
+  exchange A[i+1]↔A[r]
+  return i+1
 ~~~
 
 PARTITION以x(=A[r])作为主元(pivot element)，对子数组A[p..r]进行就地重排。在此过程中A[p..i]中的各个值都小于或等于x，A[i+1..j-1]中的值都大于x，A[r]=x。A[j..r-1]中的值可以取任何值。
@@ -248,9 +248,9 @@ PARTITION以x(=A[r])作为主元(pivot element)，对子数组A[p..r]进行就�
 
 ~~~
 RANDOMIZED-PARTITION(A, p, r)
-	i ← RANDOM(p, r)
-	exchange A[r]↔A[i]
-	return PARTIONTION(A, p, r)
+  i ← RANDOM(p, r)
+  exchange A[r]↔A[i]
+  return PARTIONTION(A, p, r)
 ~~~
 
 随机取样(random sampling)是一种随机化技术。在这种方法中，不是始终采用A[r]作为主元，而是从子数组A[p..r]中随机选择一个元素，即将A[r]与从A[p..r]中随机选出的一个元素交换（因为主元元素是随机选择的，我们期望在平均情况下，对输入数组的划分能够比较对称）。
