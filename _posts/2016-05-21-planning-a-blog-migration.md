@@ -3,7 +3,7 @@ published: true
 title: 博客准备于最近迁移到coding.net
 layout: post
 author: linnet8989
-category: leetcode
+category: others
 tags:
 - notification
 ---
