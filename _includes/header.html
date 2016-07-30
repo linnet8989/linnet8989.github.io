@@ -15,11 +15,9 @@
       </a>
       <div class="trigger">
         {% for page in site.pages %}
-        {% ifchanged page.title %}
         {% if page.title %}
-        <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+        <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title | replace: page.title, site.locales[site.default_locale].[page.title] }}</a>
         {% endif %}
-        {% endifchanged %}
         {% endfor %}
       </div>
     </nav>

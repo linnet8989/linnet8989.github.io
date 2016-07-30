@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Categories
+permalink: /categories/
 ---
 
 <ul class="tags-box">
@@ -22,3 +23,4 @@ title: Categories
 <span>No posts</span>
 {% endif %}
 </ul>
+

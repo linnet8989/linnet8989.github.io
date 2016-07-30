@@ -1,1 +1,1 @@
-这是我的博客源码，欢迎访问我的博客 http://linnet8989.github.io
+[Linnet's blog](http://www.linnet8989.me), it's about algorithm, c#, python and so on.

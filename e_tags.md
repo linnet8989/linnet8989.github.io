@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Tags
+permalink: /tags/
 ---
 
 <ul class="tags-box">
